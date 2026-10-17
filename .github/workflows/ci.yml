@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:7
+        ports: ["27017:27017"]
+      redis:
+        image: redis:7
+        ports: ["6379:6379"]
+    env:
+      MONGO_URL: mongodb://localhost:27017
+      REDIS_URL: redis://localhost:6379/0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install packages
+        run: pip install -r requirements.txt
+      - name: Unit, API and integration tests (real MongoDB and Redis)
+        run: pytest -q
+      - name: Offline evaluation (rules baseline)
+        run: python scripts/evaluate.py

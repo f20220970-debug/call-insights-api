@@ -1,0 +1,10 @@
+fastapi==0.115.6
+uvicorn==0.32.1
+motor==3.6.0
+redis==5.2.1
+pydantic==2.10.4
+httpx==0.28.1
+pytest==8.3.3
+pytest-asyncio==0.24.0
+mongomock-motor==0.0.34
+fakeredis==2.26.2

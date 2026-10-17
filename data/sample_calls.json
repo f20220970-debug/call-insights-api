@@ -1,0 +1,618 @@
+[
+ {
+  "call_id": "bank-001",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello, this is a reminder that your EMI of Rs 4,500 is overdue."
+   },
+   {
+    "speaker": "customer",
+    "text": "Yes I know, salary got delayed. I will pay Rs 4,500 on Friday."
+   },
+   {
+    "speaker": "agent",
+    "text": "Thank you, I will note that."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 4500,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-002",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your credit card payment is due."
+   },
+   {
+    "speaker": "customer",
+    "text": "I was charged twice for the same purchase, this is unacceptable. I didn't make the second transaction."
+   },
+   {
+    "speaker": "agent",
+    "text": "I understand, let me raise a dispute."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-003",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about your outstanding loan instalment."
+   },
+   {
+    "speaker": "customer",
+    "text": "I'm fed up with these calls. I want to speak to your manager, otherwise I will complain to the ombudsman."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "bank-004",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI is due on the 5th."
+   },
+   {
+    "speaker": "customer",
+    "text": "Thanks for reminding me. I'll transfer Rs 12,000 tomorrow."
+   },
+   {
+    "speaker": "agent",
+    "text": "Great, have a good day."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "positive",
+   "promise": true,
+   "amount": 12000,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-005",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Good morning, how can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "I just wanted to know my branch timings."
+   },
+   {
+    "speaker": "agent",
+    "text": "Our branch is open 10 to 4."
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-006",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your payment of Rs 8,200 is overdue by 15 days."
+   },
+   {
+    "speaker": "customer",
+    "text": "I can't pay right now, I lost my job. Please give me some time."
+   },
+   {
+    "speaker": "agent",
+    "text": "I will note your request."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-007",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about a transaction flagged on your card."
+   },
+   {
+    "speaker": "customer",
+    "text": "That is not my transaction! This is terrible, block the card now."
+   },
+   {
+    "speaker": "agent",
+    "text": "Blocking it and raising a dispute."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-008",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your minimum due is Rs 2,300."
+   },
+   {
+    "speaker": "customer",
+    "text": "Okay, I will clear it on Monday. Thanks."
+   },
+   {
+    "speaker": "agent",
+    "text": "Thank you."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "positive",
+   "promise": true,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ins-001",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your health policy is up for renewal next week."
+   },
+   {
+    "speaker": "customer",
+    "text": "Great, please send me the premium details, I will renew it."
+   },
+   {
+    "speaker": "agent",
+    "text": "Sending the link now."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ins-002",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about your claim submitted last month."
+   },
+   {
+    "speaker": "customer",
+    "text": "It has been 40 days, this is ridiculous. I want to escalate this and speak to a supervisor."
+   },
+   {
+    "speaker": "agent",
+    "text": "I will escalate it today."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "ins-003",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "What is the status you would like to check?"
+   },
+   {
+    "speaker": "customer",
+    "text": "My car insurance claim, the surveyor visited yesterday."
+   },
+   {
+    "speaker": "agent",
+    "text": "It is under review and should be settled in 7 days."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ins-004",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your premium of Rs 9,800 is pending."
+   },
+   {
+    "speaker": "customer",
+    "text": "I'll pay Rs 9,800 on Wednesday, thanks for calling."
+   },
+   {
+    "speaker": "agent",
+    "text": "Noted."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "positive",
+   "promise": true,
+   "amount": 9800,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ins-005",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello, how can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "I am not happy with the renewal price, it went up a lot. I may cancel the policy."
+   },
+   {
+    "speaker": "agent",
+    "text": "Let me check discounts."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "ins-006",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your claim has been approved."
+   },
+   {
+    "speaker": "customer",
+    "text": "That's great news, thank you so much, very helpful."
+   },
+   {
+    "speaker": "agent",
+    "text": "You're welcome."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-001",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help with your order?"
+   },
+   {
+    "speaker": "customer",
+    "text": "My parcel was not delivered but the app says delivered. I'm really upset."
+   },
+   {
+    "speaker": "agent",
+    "text": "I will raise a ticket with the courier."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-002",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "I returned the shoes a week ago and I still haven't got my refund."
+   },
+   {
+    "speaker": "agent",
+    "text": "The refund will reach you in 3 days."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-003",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "The phone arrived damaged. This is the worst experience, I want a supervisor."
+   },
+   {
+    "speaker": "agent",
+    "text": "Transferring you."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "ecom-004",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your refund of Rs 1,499 has been processed."
+   },
+   {
+    "speaker": "customer",
+    "text": "Perfect, thanks a lot."
+   },
+   {
+    "speaker": "agent",
+    "text": "Have a nice day."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-005",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello, how may I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Can I change the delivery address for my order?"
+   },
+   {
+    "speaker": "agent",
+    "text": "Yes, I have updated it."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-006",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hi, how can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "I want to know if you deliver to Pune."
+   },
+   {
+    "speaker": "agent",
+    "text": "Yes, we do."
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-009",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI bounced this month."
+   },
+   {
+    "speaker": "customer",
+    "text": "Sorry, low balance. I will pay 6,000 rupees by Saturday."
+   },
+   {
+    "speaker": "agent",
+    "text": "Okay, noted."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 6000,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "bank-010",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "There is a late fee on your account."
+   },
+   {
+    "speaker": "customer",
+    "text": "I paid on time, this late fee is a wrong charge. Remove it or I will go to consumer court."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "ins-007",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Would you like to renew your term policy?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Not now, I am comparing other options."
+   },
+   {
+    "speaker": "agent",
+    "text": "Sure, I'll call next week."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "ecom-007",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "I was charged twice for one order, please refund the extra amount."
+   },
+   {
+    "speaker": "agent",
+    "text": "I'll check and refund it."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ }
+]

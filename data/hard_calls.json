@@ -1,0 +1,254 @@
+[
+ {
+  "call_id": "hard-001",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI is pending."
+   },
+   {
+    "speaker": "customer",
+    "text": "Haan, salary aate hi bhar dunga, Friday tak 5000 kar dunga."
+   },
+   {
+    "speaker": "agent",
+    "text": "Theek hai, noted."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 5000,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-002",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about your dues."
+   },
+   {
+    "speaker": "customer",
+    "text": "Connect me to someone senior, I'm done talking to you people."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "hard-003",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "There's a debit of 3,999 on your card."
+   },
+   {
+    "speaker": "customer",
+    "text": "I never bought anything for 3,999. Someone has used my card."
+   },
+   {
+    "speaker": "agent",
+    "text": "Let me block it."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-004",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your loan account shows an overdue amount."
+   },
+   {
+    "speaker": "customer",
+    "text": "Settle ho jayega day after tomorrow, poora 7500."
+   },
+   {
+    "speaker": "agent",
+    "text": "Okay."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 7500,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-005",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your policy lapses this month."
+   },
+   {
+    "speaker": "customer",
+    "text": "Honestly your service has been brilliant, go ahead and auto-debit it."
+   },
+   {
+    "speaker": "agent",
+    "text": "Done."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-006",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Any update needed on your hospitalisation reimbursement?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Two months and no money. If this isn't sorted by Friday I'm going to the regulator."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "hard-007",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "The box came with the wrong size inside. Can I swap it?"
+   },
+   {
+    "speaker": "agent",
+    "text": "Yes, exchange booked."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-008",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "I sent the dress back, when does my money come back?"
+   },
+   {
+    "speaker": "agent",
+    "text": "Within 5 days."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "hard-009",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hi."
+   },
+   {
+    "speaker": "customer",
+    "text": "Third time calling about the same missing order. Unbelievable. I'm deleting my account."
+   },
+   {
+    "speaker": "agent",
+    "text": "I'm sorry, let me fix this."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "hard-010",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Reminder about your credit card bill."
+   },
+   {
+    "speaker": "customer",
+    "text": "Oh wonderful, I'd forgotten. Paying the full 18,450 right now."
+   },
+   {
+    "speaker": "agent",
+    "text": "Thank you!"
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "positive",
+   "promise": true,
+   "amount": 18450,
+   "escalation": false
+  }
+ }
+]
