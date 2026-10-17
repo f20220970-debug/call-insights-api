@@ -10,6 +10,7 @@ GET  /health                MongoDB and Redis connectivity
 import logging
 import time
 import uuid
+import asyncio
 from contextlib import asynccontextmanager
 
 from typing import Optional
@@ -17,7 +18,8 @@ from typing import Optional
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from pymongo.errors import DuplicateKeyError
 
-from . import store
+from . import store, worker
+from .config import settings
 from .deps import get_db, get_redis
 from .schemas import CallIn, CallOut, JobStatus
 
@@ -27,7 +29,10 @@ log = logging.getLogger("api")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await store.ensure_indexes(get_db())
+    task = asyncio.create_task(worker.run_forever()) if settings.run_worker else None
     yield
+    if task:
+        task.cancel()
 
 
 app = FastAPI(title="Call Insights API", version="1.0.0", lifespan=lifespan)

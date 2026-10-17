@@ -34,13 +34,21 @@ async def process_one(db, redis, provider, timeout: int = 5) -> str | None:
     return call_id
 
 
-async def main():
-    logging.basicConfig(level=logging.INFO)
+async def run_forever():
     db, redis, provider = get_db(), get_redis(), llm.get_provider()
     await store.ensure_indexes(db)
     log.info("worker started, provider=%s", provider.name)
     while True:
-        await process_one(db, redis, provider)
+        try:
+            await process_one(db, redis, provider)
+        except Exception as e:                 # e.g. Redis connection blip: wait and keep going
+            log.warning("worker loop error: %s", e)
+            await asyncio.sleep(5)
+
+
+async def main():
+    logging.basicConfig(level=logging.INFO)
+    await run_forever()
 
 
 if __name__ == "__main__":
