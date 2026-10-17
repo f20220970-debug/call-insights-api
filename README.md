@@ -1,5 +1,7 @@
 # Call Insights API
 
+**Live demo:** https://call-insights-console.vercel.app (free hosting: the first load can take up to a minute while the servers wake up)
+
 A FastAPI backend that turns enterprise contact-centre call transcripts into structured insights with an LLM:
 transcripts are submitted over a REST API, stored in **MongoDB**, queued in **Redis**, and analysed by a background
 worker that prompts an LLM for **validated JSON**: a summary, intent, customer sentiment, promise-to-pay (amount
