@@ -1,6 +1,7 @@
 """REST API.
 
 POST /v1/calls              submit a transcript -> 202, analysis queued
+GET  /v1/calls              list calls, newest first (filters: status, intent, escalation)
 GET  /v1/calls/{call_id}    status and insights (served from Redis cache when done)
 POST /v1/calls/{id}/retry   re-queue a failed call
 GET  /v1/stats              aggregate intents, sentiment, escalation and promise-to-pay rates
@@ -11,7 +12,9 @@ import time
 import uuid
 from contextlib import asynccontextmanager
 
-from fastapi import Depends, FastAPI, HTTPException, Request
+from typing import Optional
+
+from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from pymongo.errors import DuplicateKeyError
 
 from . import store
@@ -51,6 +54,35 @@ async def submit(call: CallIn, db=Depends(get_db), redis=Depends(get_redis)):
         raise HTTPException(409, f"call_id {call.call_id} already exists")
     await store.enqueue(redis, call.call_id)
     return CallOut(call_id=call.call_id, status=JobStatus.queued)
+
+
+class CallSummary(CallOut):
+    domain: str
+    created_at: str
+    transcript_preview: str
+
+
+@app.get("/v1/calls", response_model=list[CallSummary])
+async def list_calls(status: Optional[JobStatus] = None, intent: Optional[str] = None,
+                     escalation: Optional[bool] = None, limit: int = Query(20, ge=1, le=100),
+                     skip: int = Query(0, ge=0), db=Depends(get_db)):
+    docs = await store.list_calls(db, status.value if status else None, intent, escalation, limit, skip)
+    out = []
+    for d in docs:
+        turns = d["call"]["turns"]
+        cust = next((t["text"] for t in turns if t["speaker"].lower() == "customer"), turns[0]["text"])
+        out.append(CallSummary(call_id=d["call_id"], status=d["status"], insights=d.get("insights"), error=d.get("error"),
+                               attempts=d.get("attempts", 0), provider=d.get("provider"), domain=d["call"]["domain"],
+                               created_at=d["created_at"].isoformat(), transcript_preview=cust[:140]))
+    return out
+
+
+@app.get("/v1/calls/{call_id}/transcript")
+async def transcript(call_id: str, db=Depends(get_db)):
+    doc = await store.get_call(db, call_id)
+    if not doc:
+        raise HTTPException(404, "call not found")
+    return doc["call"]
 
 
 @app.get("/v1/calls/{call_id}", response_model=CallOut)

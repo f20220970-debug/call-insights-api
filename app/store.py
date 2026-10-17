@@ -24,6 +24,19 @@ async def get_call(db, call_id: str):
     return await db[CALLS].find_one({"call_id": call_id}, {"_id": 0})
 
 
+async def list_calls(db, status=None, intent=None, escalation=None, limit=20, skip=0) -> list:
+    """Newest first, with optional filters on status, intent and escalation."""
+    q = {}
+    if status:
+        q["status"] = status
+    if intent:
+        q["insights.intent"] = intent
+    if escalation is not None:
+        q["insights.escalation_needed"] = escalation
+    cur = db[CALLS].find(q, {"_id": 0}).sort("created_at", -1).skip(skip).limit(limit)
+    return await cur.to_list(limit)
+
+
 async def update_call(db, call_id: str, **fields):
     fields["updated_at"] = now()
     await db[CALLS].update_one({"call_id": call_id}, {"$set": fields})

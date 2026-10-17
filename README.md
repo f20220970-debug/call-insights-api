@@ -18,6 +18,8 @@ client ──POST /v1/calls──► FastAPI ──insert──► MongoDB (call
 | Method | Path | What it does |
 | --- | --- | --- |
 | POST | `/v1/calls` | Submit a transcript (validated); 202 queued, 409 duplicate `call_id`, 422 invalid input |
+| GET | `/v1/calls` | List calls, newest first; filter by `status`, `intent`, `escalation` |
+| GET | `/v1/calls/{call_id}/transcript` | The original transcript |
 | GET | `/v1/calls/{call_id}` | Status (`queued` / `processing` / `done` / `failed`) and insights; served from Redis cache once done |
 | POST | `/v1/calls/{call_id}/retry` | Re-queue a failed call |
 | GET | `/v1/stats` | MongoDB aggregation: counts by status, intent, sentiment; escalation and promise-to-pay rates |
@@ -37,15 +39,8 @@ Interactive docs at `http://localhost:8000/docs` when running.
 ## Evaluation
 `scripts/evaluate.py` scores a provider on 34 labelled, fictional calls (banking, insurance, e-commerce):
 a core set and a held-out hard set with paraphrases, Hinglish and indirect wording.
-| Hard held-out set (10 calls: Hinglish, paraphrases, indirect wording) | Keyword baseline | Gemini Flash-Lite |
-| --- | --- | --- |
-| Intent | 40% | 100% |
-| Sentiment | 40% | 90% |
-| Escalation needed | 70% | 100% |
-| Promise to pay | 70% | 100% |
-| Promised amount | 70% | 100% |
 
-On the core set (24 calls) Gemini scored 92% intent and 88% sentiment; most misses were debatable labels (premium payment read as a payment reminder rather than a renewal; "charged twice, please refund" read as a refund rather than a dispute). Every Gemini reply was valid JSON on the first attempt; typical latency was 1-2 seconds per call. With only 34 fictional calls, treat these as a sanity check, not production accuracy.
+_Fill in after your run: baseline vs Gemini accuracy on the hard set._
 
 ## Run it
 ```bash

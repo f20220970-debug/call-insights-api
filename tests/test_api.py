@@ -56,3 +56,19 @@ async def test_stats(env, sample):
     s = (await client.get("/v1/stats")).json()
     assert s["analysed"] == 6 and s["by_status"]["done"] == 6
     assert 0 < s["escalation_rate"] < 1 and sum(s["by_intent"].values()) == 6
+
+
+async def test_list_filters_and_transcript(env, sample):
+    client, db, redis = env
+    for c in sample[:8]:
+        await client.post("/v1/calls", json=c)
+    for _ in range(8):
+        await worker.process_one(db, redis, llm.RulesProvider(), timeout=1)
+    rows = (await client.get("/v1/calls", params={"limit": 5})).json()
+    assert len(rows) == 5 and rows[0]["transcript_preview"]
+    esc = (await client.get("/v1/calls", params={"escalation": "true"})).json()
+    assert esc and all(r["insights"]["escalation_needed"] for r in esc)
+    disputes = (await client.get("/v1/calls", params={"intent": "payment_dispute"})).json()
+    assert all(r["insights"]["intent"] == "payment_dispute" for r in disputes)
+    t = (await client.get(f"/v1/calls/{sample[0]['call_id']}/transcript")).json()
+    assert t["turns"][0]["speaker"] == "agent"
