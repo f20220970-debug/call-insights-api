@@ -1,0 +1,1110 @@
+[
+ {
+  "call_id": "h50-01",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI of Rs 3,200 is due tomorrow."
+   },
+   {
+    "speaker": "customer",
+    "text": "Okay, I'll pay it tonight, thanks."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "positive",
+   "promise": true,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-02",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "We noticed a charge of Rs 4,999 on your card."
+   },
+   {
+    "speaker": "customer",
+    "text": "I didn't buy anything for that amount. Please reverse it."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-03",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your car policy expires on the 30th."
+   },
+   {
+    "speaker": "customer",
+    "text": "Please go ahead and renew it, same plan as last year."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-04",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about your health claim."
+   },
+   {
+    "speaker": "customer",
+    "text": "Any update? It's been three weeks."
+   },
+   {
+    "speaker": "agent",
+    "text": "It's approved, payment in 2 days."
+   },
+   {
+    "speaker": "customer",
+    "text": "Finally, thank you."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-05",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "My headphones stopped working after two days. I want my money back."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-06",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "The delivery partner left my parcel at the wrong flat."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-07",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello, how can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "What's the interest rate on your fixed deposits right now?"
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-08",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your loan account is overdue by Rs 15,000."
+   },
+   {
+    "speaker": "customer",
+    "text": "I can pay 5,000 on Monday and the rest next month."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 5000,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-09",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your premium of Rs 22,000 is due."
+   },
+   {
+    "speaker": "customer",
+    "text": "This is far too expensive. I'm cancelling and moving to another insurer."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-10",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hi."
+   },
+   {
+    "speaker": "customer",
+    "text": "I was charged for express shipping but it came in a week."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-11",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your credit card bill is Rs 7,450."
+   },
+   {
+    "speaker": "customer",
+    "text": "Got it, paying the full amount right now."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 7450,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-12",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your refund of Rs 899 is processed."
+   },
+   {
+    "speaker": "customer",
+    "text": "Great, appreciate the quick help!"
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-13",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Does my policy cover dental treatment?"
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-14",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Calling about an overdue amount."
+   },
+   {
+    "speaker": "customer",
+    "text": "Stop calling me five times a day. Put me through to your supervisor right now."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-15",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Where is my order? It said two days and it's been five."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-16",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your claim needs one more document."
+   },
+   {
+    "speaker": "customer",
+    "text": "Sure, I'll upload the discharge summary today."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-17",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your minimum due is Rs 2,100."
+   },
+   {
+    "speaker": "customer",
+    "text": "I'll clear it by Friday."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-18",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "I got two of the same item but was charged once. Should I send one back?"
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-19",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Aapka EMI pending hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Haan pata hai, kal tak 4500 bhej dunga."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 4500,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-20",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Card pe ek transaction flag hua hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Yeh maine nahi kiya, mera card block karo abhi."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-21",
+  "language": "hi-en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Aapki policy renew karni hai?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Haan kar do, bas premium same rehna chahiye."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-22",
+  "language": "hi-en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Claim ke baare mein call kiya tha."
+   },
+   {
+    "speaker": "customer",
+    "text": "Ek mahina ho gaya, kuch nahi hua. Main consumer forum jaaunga."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-23",
+  "language": "hi-en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Kaise madad karun?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Saree ka colour bilkul alag aaya, paise wapas chahiye."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-24",
+  "language": "hi-en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "Order abhi tak nahi aaya, tracking bhi update nahi ho raha."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-25",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Aapka bill 9,800 ka hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Theek hai, salary aate hi 9800 pura bhar dungi, 1 tareekh ko."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 9800,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-26",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Overdue amount ke liye call hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Bhai mere paas abhi paise nahi hain, thoda time do."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-27",
+  "language": "hi-en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Refund ho gaya hai aapka."
+   },
+   {
+    "speaker": "customer",
+    "text": "Arre wah, bahut badhiya, thank you!"
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-28",
+  "language": "hi-en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Kaise help karun?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Mujhe bas yeh jaanna tha ki policy mein maternity cover hai ya nahi."
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-29",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Late fee lagi hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Maine time pe pay kiya tha, yeh fee galat hai. Hatao isko."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-30",
+  "language": "hi-en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello ji."
+   },
+   {
+    "speaker": "customer",
+    "text": "Teesri baar call kar raha hoon same issue ke liye. Senior se baat karao."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-31",
+  "language": "hi-en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "EMI bounce ho gaya hai."
+   },
+   {
+    "speaker": "customer",
+    "text": "Sorry, galti se hua. Parso 6200 daal dunga."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 6200,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-32",
+  "language": "hi-en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Premium due hai is mahine."
+   },
+   {
+    "speaker": "customer",
+    "text": "Itna mehenga ho gaya? Main band kar dunga policy."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-33",
+  "language": "hi-en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Kya problem hai?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Packet phata hua aaya, andar ka saman toota hua tha."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-34",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Reminder about your dues."
+   },
+   {
+    "speaker": "customer",
+    "text": "Let me check with my husband and get back to you."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-35",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI is due."
+   },
+   {
+    "speaker": "customer",
+    "text": "Didn't I already pay this? I have the bank SMS right here."
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-36",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Following up on your claim."
+   },
+   {
+    "speaker": "customer",
+    "text": "I've given up honestly. Do whatever you want."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-37",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How can I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "I'd like to send back the shoes, they don't fit, and get the money in my account."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-38",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your card payment is pending."
+   },
+   {
+    "speaker": "customer",
+    "text": "Sure sure, I'll sort it out sometime this month."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-39",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hi."
+   },
+   {
+    "speaker": "customer",
+    "text": "Lovely service as usual, the groceries came in 20 minutes. Just wanted to say that."
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-40",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your policy is up for renewal."
+   },
+   {
+    "speaker": "customer",
+    "text": "If you can't match the other company's quote, I'm afraid we're done here."
+   }
+  ],
+  "label": {
+   "intent": "policy_renewal",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-41",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Overdue reminder."
+   },
+   {
+    "speaker": "customer",
+    "text": "Fine. Twelve thousand. Wednesday. Happy now?"
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "negative",
+   "promise": true,
+   "amount": 12000,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-42",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Hello."
+   },
+   {
+    "speaker": "customer",
+    "text": "The app says delivered. My door says otherwise."
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-43",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "There's a charge from a streaming service."
+   },
+   {
+    "speaker": "customer",
+    "text": "I cancelled that subscription in March. Why am I still paying for it?"
+   }
+  ],
+  "label": {
+   "intent": "payment_dispute",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-44",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Claim update call."
+   },
+   {
+    "speaker": "customer",
+    "text": "Approved? Oh that's a relief, I was really worried."
+   }
+  ],
+  "label": {
+   "intent": "claim_status",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-45",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your dues are pending."
+   },
+   {
+    "speaker": "customer",
+    "text": "I'll be writing to the banking ombudsman about how your agents speak to people."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-46",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "How may I help?"
+   },
+   {
+    "speaker": "customer",
+    "text": "Can I change my delivery slot to the evening?"
+   }
+  ],
+  "label": {
+   "intent": "order_issue",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-47",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your EMI is overdue."
+   },
+   {
+    "speaker": "customer",
+    "text": "Transfer's done, should reflect by tomorrow."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-48",
+  "language": "en",
+  "domain": "ecommerce",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Your refund was rejected."
+   },
+   {
+    "speaker": "customer",
+    "text": "Rejected? The product was clearly defective. This is unacceptable, escalate it."
+   }
+  ],
+  "label": {
+   "intent": "refund_request",
+   "sentiment": "negative",
+   "promise": false,
+   "amount": null,
+   "escalation": true
+  }
+ },
+ {
+  "call_id": "h50-49",
+  "language": "en",
+  "domain": "insurance",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "Anything else?"
+   },
+   {
+    "speaker": "customer",
+    "text": "No, that's all. You've been very patient, thank you."
+   }
+  ],
+  "label": {
+   "intent": "general_query",
+   "sentiment": "positive",
+   "promise": false,
+   "amount": null,
+   "escalation": false
+  }
+ },
+ {
+  "call_id": "h50-50",
+  "language": "en",
+  "domain": "banking",
+  "turns": [
+   {
+    "speaker": "agent",
+    "text": "About your loan overdue."
+   },
+   {
+    "speaker": "customer",
+    "text": "Half now, half after Diwali. I'll send 8,000 today."
+   }
+  ],
+  "label": {
+   "intent": "payment_reminder",
+   "sentiment": "neutral",
+   "promise": true,
+   "amount": 8000,
+   "escalation": false
+  }
+ }
+]

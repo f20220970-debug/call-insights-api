@@ -49,7 +49,11 @@ async def main():
     lines = [f"# Evaluation: provider = {provider.name}", "",
              "The core set was written alongside the rules baseline, so the baseline's core score is not meaningful;",
              "the held-out 'hard' set (paraphrases, Hinglish, indirect wording) is the fairer test.", ""]
-    for label, fname in [("core", "sample_calls.json"), ("hard", "hard_calls.json")]:
+    sets = [("core", "sample_calls.json"), ("hard", "hard_calls.json"), ("heldout-50", "heldout_50.json")]
+    only = __import__("os").getenv("EVAL_SET")
+    if only:
+        sets = [x for x in sets if x[0] == only]
+    for label, fname in sets:
         rows = json.loads((ROOT / "data" / fname).read_text())
         acc, n, fails, avg_att = await evaluate(rows, provider)
         lines += [f"## {label} set ({len(rows)} calls): {n} analysed, {fails} failed, average attempts {avg_att:.2f}", "",

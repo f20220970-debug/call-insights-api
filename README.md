@@ -44,6 +44,20 @@ a core set and a held-out hard set with paraphrases, Hinglish and indirect wordi
 
 _Fill in after your run: baseline vs Gemini accuracy on the hard set._
 
+
+### Held-out evaluation (50 calls)
+50 new English and Hinglish calls, labelled before running either model (fictional, no customer data):
+
+| Field | Keyword baseline | Gemini Flash-Lite |
+| --- | --- | --- |
+| Intent | 62% | 94% |
+| Sentiment | 52% | 88% |
+| Escalation needed | 90% | 98% |
+| Promise to pay | 86% | 98% |
+| Promised amount | 86% | 100% |
+
+All 50 Gemini replies were valid JSON on the first attempt. Next step: real, anonymised calls labelled by two people, with their agreement measured.
+
 ## Run it
 ```bash
 python3.11 -m venv .venv && source .venv/bin/activate
